@@ -56,11 +56,11 @@
 	}, 2000);
   
 	function navigateToAutomation() {
-	  location.href = "automation";
+	     window.location.href =  "/automation";
 	}
   
 	function navigateToPricing() {
-	   location.href="pricing";
+	      window.location.href = "/pricing";
 	}
    
   </script>
@@ -82,8 +82,8 @@
 		  </nav>
 	
 		  <Route path="/" component={Home} />
-		  <Route path="/recruiting_automation" component={RecruitingAutomation} />
-		  <Route path="/recruiting_pricing" component={RecruitingPricing} />
+		  <Route path="/automation" component={RecruitingAutomation} />
+		  <Route path="/pricing" component={RecruitingPricing} />
 		</Router>
 	  </div>
   
