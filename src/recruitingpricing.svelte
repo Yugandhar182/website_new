@@ -26,13 +26,13 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
     <div class="links">
         <nav>
             <ul>
-               <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color: red; font-weight: 700;">Why Recruitly</a>
+               <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color:blue; font-weight: 700;">Why Recruitly</a>
               <span class="spacer"></span>
-              <li><Link to="/automation" style="color: red; font-weight: 700;">Automation</Link></li>
+              <li><Link to="/automation" style="color:blue; font-weight: 700;">Automation</Link></li>
              
-              <li><Link to="/pricing" style="color: red; font-weight: 700;">Pricing</Link></li>
+              <li><Link to="/pricing" style="color: blue; font-weight: 700;">Pricing</Link></li>
              
-              <li><a href="/" style="color: red; font-weight: 700;">Home</a></li> 
+              
             </ul>
           </nav>
           </div>
@@ -44,7 +44,7 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
         <p>If your place of business is in the EU (excluding the UK) and we are not obliged to charge you VAT (due to current applicable law).
         <p> we will only exclude VAT from invoices if you provide us with a valid VAT registration number or other proof that you are using the Service for business purposes.</p>
       </div>
-      <h1 class="display-4" style="color:green;font-weight:400;">Affordable plans for you</h1>
+      <h1 class="display-4" style="color:green;font-weight:400;">Affordable plans </h1>
       <section class="features-section">
         <table>
             
