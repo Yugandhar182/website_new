@@ -56,11 +56,11 @@
 	}, 2000);
   
 	function navigateToAutomation() {
-	  navigate("/recruiting_automation");
+	  location.href = "automation";
 	}
   
 	function navigateToPricing() {
-	  navigate("/recruiting_pricing");
+	   location.href="pricing";
 	}
    
   </script>
