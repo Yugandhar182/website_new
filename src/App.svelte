@@ -57,8 +57,10 @@
     <Router>
 		 
 
-		  <li><Link to="/automation" style="color:blue; font-weight: 700;">Automation</Link></li>
-  <li><Link to="/pricing" style="color:blue; font-weight: 700;">Pricing</Link></li>
+			<a on:click={navigateToAutomation} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Automation</a>
+      <span class="spacer"></span>
+			<a on:click={navigateToPricing} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Pricing</a>
+      
 		 
 	
 		 
@@ -200,7 +202,7 @@
   
 	.information {
 	  position: absolute;
-	  top: 18px;
+	  top: 40px;
 	  right: 270px;
 	  display: flex;
 	  flex-direction: row;
