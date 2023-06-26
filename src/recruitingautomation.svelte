@@ -24,13 +24,12 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
     <div class="links">
     <nav>
         <ul>
-           <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color: red; font-weight: 700;">Why Recruitly</a>
+           <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Why Recruitly</a>
           <span class="spacer"></span>
-          <li><Link to="/automation" style="color: red; font-weight: 700;">Automation</Link></li>
+          <li><Link to="/automation" style="color:blue; font-weight: 700;">Automation</Link></li>
          
-          <li><Link to="/pricing" style="color: red; font-weight: 700;">Pricing</Link></li>
-         
-          <li><a href="/" style="color: red; font-weight: 700;">Home</a></li> 
+          <li><Link to="/pricing" style="color:blue; font-weight: 700;">Pricing</Link></li>
+       
         </ul>
       </nav>
       </div>
