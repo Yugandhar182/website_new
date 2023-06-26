@@ -96,6 +96,9 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
   
   <style>
    
+   .spacer {
+	margin: 0 10px;
+  }
    .hero-section {
     text-align: center;
     margin-top: -1000px;
@@ -128,13 +131,6 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
     font-weight: bold;
     font-size: 1rem;
    }
- 
-   .spacer {
-	margin: 0 10px;
-  }
-
-  
-   
     
     body {
       margin: 0;
@@ -155,9 +151,7 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
       margin-right: -50vh;
     }
 
-    .why-recruitly-anchor {
-	  cursor: pointer;
-	}
+    
 
    
 
