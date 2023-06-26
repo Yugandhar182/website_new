@@ -57,10 +57,8 @@
     <Router>
 		 
 
-			<a on:click={navigateToAutomation} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Automation</a>
-      <span class="spacer"></span>
-			<a on:click={navigateToPricing} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Pricing</a>
-      
+		  <li><Link to="/automation" style="color:blue; font-weight: 700;">Automation</Link></li>
+  <li><Link to="/pricing" style="color:blue; font-weight: 700;">Pricing</Link></li>
 		 
 	
 		 
