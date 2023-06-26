@@ -2,11 +2,7 @@
 	import { createEventDispatcher} from 'svelte';
 	import 'bootstrap/dist/css/bootstrap.min.css';
 	import { navigate } from "svelte-navigator";
-  
-  
-	import Home from './Home.svelte';
-  
-	const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher();
 	import { Router, Link, Route } from "svelte-routing";
 	import RecruitingAutomation from "./recruitingautomation.svelte";
 	import RecruitingPricing from "./recruitingpricing.svelte";
@@ -56,11 +52,11 @@
 	}, 2000);
   
 	function navigateToAutomation() {
-	     window.location.href =  "/automation";
+    location.href = "/automation";
 	}
   
 	function navigateToPricing() {
-	      window.location.href = "/pricing";
+    location.href="/pricing";
 	}
    
   </script>
@@ -70,22 +66,23 @@
 	<div class="information">
 	  <a on:click={openWhyRecruitlyPopup}  class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Why Recruitly</a>
 	  <span class="spacer"></span>
-	 <li><a on:click={openTryFreeModal} style="color: blue; font-weight: 700;" class="why-recruitly-anchor" >Try Free</a></li>
-	   
-	  </div>
-	  <div>
-		<Router>
+    <Router>
 		  <nav>
-			<Link to="/">Home</Link>
-			<a on:click={navigateToAutomation}>Automation</a>
-			<a on:click={navigateToPricing}>Pricing</a>
+
+			<a on:click={navigateToAutomation} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Automation</a>
+      <span class="spacer"></span>
+			<a on:click={navigateToPricing} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Pricing</a>
+      
 		  </nav>
 	
-		  <Route path="/" component={Home} />
+		 
 		  <Route path="/automation" component={RecruitingAutomation} />
 		  <Route path="/pricing" component={RecruitingPricing} />
 		</Router>
+	 <li><a on:click={openTryFreeModal} style="color: blue; font-weight: 700;" class="why-recruitly-anchor" >Try Free</a></li>
+	   
 	  </div>
+	
   
 	
 	
