@@ -97,16 +97,10 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
   
   <style>
 
-h1.display-4 {
-    text-align: center;
-	  font-size: 3.5rem;
-	  margin-bottom: 0.5rem;
-	  font-stretch: expanded;
-	}
-      .hero-section {
-       
+
+    .hero-section {
         text-align: center;
-    margin-top: -700px;
+    margin-top: -500px;
     margin-bottom: 10px;
   }
    
@@ -121,7 +115,7 @@ h1.display-4 {
     .close-button {
       margin-top: 20px;
       padding: 10px 20px;
-    
+      background-color: purple;
       color: white;
       border: none;
       border-radius: 5px;
@@ -131,7 +125,7 @@ h1.display-4 {
     body {
       margin: 0;
       padding: 0;
-     
+      font-family: Arial, sans-serif;
     }
 
     .pricing-component {
@@ -142,13 +136,10 @@ h1.display-4 {
       justify-content: center;
       align-items: center;
       background-color: #f0f0f0;
-      padding: 50px;
+      padding: 20px;
       margin-left: 140vh;
       margin-right: -50vh;
     }
-    .why-recruitly-anchor {
-	  cursor: pointer;
-	}
 
     
 
@@ -166,6 +157,7 @@ h1.display-4 {
       font-size: 16px;
       margin-bottom: 5px;
     }
+
     .links {
     display: flex;
     justify-content: center;
@@ -181,7 +173,6 @@ h1.display-4 {
   .links li {
     margin-right: 20px;
   }
-   
   .spacer {
 	margin: 0 10px;
   }
