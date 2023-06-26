@@ -56,11 +56,11 @@
 	}, 2000);
   
 	function navigateToAutomation() {
-	  window.location.href = ("/recruiting_automation");
+	  navigate("/recruiting_automation");
 	}
   
 	function navigateToPricing() {
-	  navigate("/recruiting_pricing", { replace: true });
+	  navigate("/recruiting_pricing");
 	}
    
   </script>
