@@ -1,4 +1,4 @@
-
+<!-- Popup.svelte -->
 <script>
     export let closePopup;
   </script>
