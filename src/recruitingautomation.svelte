@@ -1,51 +1,49 @@
-
-  <script>
-  import 'bootstrap/dist/css/bootstrap.min.css';
-  import { Link } from "svelte-routing";
-  import { createEventDispatcher } from 'svelte';
-  import Popup from './Popup.svelte';
-
-  let isPopupOpen = false;
-  const dispatch = createEventDispatcher();
-function openWhyRecruitlyPopup() {
-  isPopupOpen = true;
-}
-
-function closePopup() {
-  isPopupOpen = false;
-}
-dispatch('openWhyRecruitlyPopup', { closePopup });
-
+<script>
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import { Link } from "svelte-routing";
+    import { createEventDispatcher } from 'svelte';
+    import Popup from './Popup.svelte';
+  
+    let isPopupOpen = false;
+    const dispatch = createEventDispatcher();
+  
+    function openWhyRecruitlyPopup() {
+      isPopupOpen = true;
+    }
+  
+    function closePopup() {
+      isPopupOpen = false;
+    }
+  
+    dispatch('openWhyRecruitlyPopup', { closePopup });
   </script>
+  
   {#if isPopupOpen}
-  <Popup {closePopup} />
-{/if}
+    <Popup {closePopup} />
+  {/if}
+  
   <section class="recruiting-automation-section">
     <div class="links">
-    <nav>
+      <nav>
         <ul>
-           <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Why Recruitly</a>
+          <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Why Recruitly</a>
           <span class="spacer"></span>
           <li><Link to="/automation" style="color:blue; font-weight: 700;">Automation</Link></li>
-         
+          <span class="spacer"></span>
           <li><Link to="/pricing" style="color:blue; font-weight: 700;">Pricing</Link></li>
-       
         </ul>
       </nav>
-      </div>
+    </div>
     <div class="automation-component">
-        
       <div class="hero-section">
         <h2 style="color: darkmagenta;">Recruiting Automation</h2>
         <p style="color:black; font-weight: 700;">Recruiting automation allows you to focus on the work that matters!</p>
         <p1 style="color:black; font-weight: 600;">Automation can be key to recruiting efficiency, but only if done right.</p1>
         <p2 style="color:black; font-weight: 600;">It takes time and effort to create the right workflow that is optimal for your business.</p2>
-       
-
       </div>
       <h style="color:blue; ">Why Automate</h>
-        <section class="testimonials-section">
-          <table>
+      <section class="testimonials-section">
+        <table>
           <div class="container">
             <div class="col">
               <div class="col-md-4">
@@ -66,7 +64,7 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
                 <div class="feature-card">
                   <i class="fa fa-users"></i>
                   <h3 style="color:purple; font-weight:600;">Contain Costs</h3>
-                  <h6>Automating redundant recruiting activities reduces the need for extensive labour.</h6>
+                  <h6>Automating redundant recruiting activities reduces the need for extensive labor.</h6>
                 </div>
               </div>
               <div class="col-md-4">
@@ -83,25 +81,20 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
                   <h6>Executing recurring activities on a daily basis gets mundane and monotonous for employees.</h6>
                 </div>
               </div>
-              
-            
+            </div>
           </div>
         </table>
-        </section>
-         
-      </div>
-      
+      </section>
+    </div>
   </section>
- 
   
   <style>
-   
-   .spacer {
-	margin: 0 10px;
-  }
-   .hero-section {
+    .spacer {
+      margin: 0 10px;
+    }
+    .hero-section {
     text-align: center;
-    margin-top: -1000px;
+    margin-top: -900px;
     margin-bottom: 10px;
   }
   .recruiting-automation-section h{
@@ -131,6 +124,10 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
     font-weight: bold;
     font-size: 1rem;
    }
+ 
+
+  
+   
     
     body {
       margin: 0;
@@ -139,6 +136,7 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
     }
 
     .automation-component {
+       margin-top:5vh;
       width: 220vh;
       height:250vh;
       display: flex;
@@ -151,7 +149,10 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
       margin-right: -50vh;
     }
 
-    
+    .why-recruitly-anchor {
+	  cursor: pointer;
+	}
+   
 
    
 
@@ -164,20 +165,25 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
       font-size: 10px;
       margin-bottom: 5px;
     }
+    
     .links {
     display: flex;
-    justify-content: center;
-    margin-right: -2000px;
+    justify-content: flex-end;
+    position: absolute;
+    top:8px;
+    right: 10px;
   }
-
+  
   .links ul {
     display: flex;
     list-style-type: none;
     padding: 0;
   }
-
+  
   .links li {
-    margin-right: 20px;
+    margin-right: 0px;
   }
+
+   
   </style>
   
