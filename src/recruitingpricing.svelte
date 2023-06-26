@@ -2,20 +2,25 @@
    import 'bootstrap/dist/css/bootstrap.min.css';
    import { Link } from "svelte-routing";
   import { createEventDispatcher } from 'svelte';
-  let showWhyRecruitlyPopup = false;
-  
-  function openWhyRecruitlyPopup() {
-    showWhyRecruitlyPopup = true;
-  }
-  
-  function closePopup() {
-    showWhyRecruitlyPopup = false;
-  }
-  
-  const dispatch = createEventDispatcher();
+ 
+  import Popup from './Popup.svelte';
+
+let isPopupOpen = false;
+const dispatch = createEventDispatcher();
+function openWhyRecruitlyPopup() {
+isPopupOpen = true;
+}
+
+function closePopup() {
+isPopupOpen = false;
+}
+dispatch('openWhyRecruitlyPopup', { closePopup });
   
   
   </script>
+   {#if isPopupOpen}
+   <Popup {closePopup} />
+ {/if}
   
   <section class="Recruitly Pricing">
     <div class="links">
@@ -141,6 +146,9 @@ h1.display-4 {
       margin-left: 140vh;
       margin-right: -50vh;
     }
+    .why-recruitly-anchor {
+	  cursor: pointer;
+	}
 
     
 
