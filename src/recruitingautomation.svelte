@@ -1,17 +1,50 @@
-<script>
-  
+
+  <script>
   import 'bootstrap/dist/css/bootstrap.min.css';
-  
-    
+  import { Link } from "svelte-routing";
+  import { createEventDispatcher } from 'svelte';
+  import Popup from './Popup.svelte';
+
+  let isPopupOpen = false;
+  const dispatch = createEventDispatcher();
+function openWhyRecruitlyPopup() {
+  isPopupOpen = true;
+}
+
+function closePopup() {
+  isPopupOpen = false;
+}
+dispatch('openWhyRecruitlyPopup', { closePopup });
+
   </script>
-  
+  {#if isPopupOpen}
+  <Popup {closePopup} />
+{/if}
   <section class="recruiting-automation-section">
+    <div class="links">
+    <nav>
+        <ul>
+           <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color: red; font-weight: 700;">Why Recruitly</a>
+          <span class="spacer"></span>
+          <li><Link to="/automation" style="color: red; font-weight: 700;">Automation</Link></li>
+         
+          <li><Link to="/pricing" style="color: red; font-weight: 700;">Pricing</Link></li>
+         
+          <li><a href="/" style="color: red; font-weight: 700;">Home</a></li> 
+        </ul>
+      </nav>
+      </div>
     <div class="automation-component">
+        
       <div class="hero-section">
         <h2 style="color: darkmagenta;">Recruiting Automation</h2>
-        <p>Recruiting automation allows you to focus on the work that matters!</p>
+        <p style="color:black; font-weight: 700;">Recruiting automation allows you to focus on the work that matters!</p>
+        <p1 style="color:black; font-weight: 600;">Automation can be key to recruiting efficiency, but only if done right.</p1>
+        <p2 style="color:black; font-weight: 600;">It takes time and effort to create the right workflow that is optimal for your business.</p2>
+       
+
       </div>
-      <h style="color:red; ">Why Automate</h>
+      <h style="color:blue; ">Why Automate</h>
         <section class="testimonials-section">
           <table>
           <div class="container">
@@ -97,6 +130,9 @@
     font-size: 1rem;
    }
  
+   .spacer {
+	margin: 0 10px;
+  }
 
   
    
@@ -120,7 +156,9 @@
       margin-right: -50vh;
     }
 
-    
+    .why-recruitly-anchor {
+	  cursor: pointer;
+	}
 
    
 
@@ -133,5 +171,20 @@
       font-size: 10px;
       margin-bottom: 5px;
     }
+    .links {
+    display: flex;
+    justify-content: center;
+    margin-right: -2000px;
+  }
+
+  .links ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .links li {
+    margin-right: 20px;
+  }
   </style>
   
