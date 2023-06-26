@@ -29,7 +29,7 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
                <a on:click={openWhyRecruitlyPopup} class="why-recruitly-anchor" style="color:blue; font-weight: 700;">Why Recruitly</a>
               <span class="spacer"></span>
               <li><Link to="/automation" style="color:blue; font-weight: 700;">Automation</Link></li>
-             
+              <span class="spacer"></span>
               <li><Link to="/pricing" style="color: blue; font-weight: 700;">Pricing</Link></li>
              
               
@@ -129,7 +129,8 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
     }
 
     .pricing-component {
-        width: 220vh;
+        margin-top:5vh;
+      width: 220vh;
       height:250vh;
       display: flex;
       flex-direction: column;
@@ -160,18 +161,20 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
 
     .links {
     display: flex;
-    justify-content: center;
-    margin-right: -2000px;
+    justify-content: flex-end;
+    position: absolute;
+    top:8px;
+    right: 10px;
   }
-
+  
   .links ul {
     display: flex;
     list-style-type: none;
     padding: 0;
   }
-
+  
   .links li {
-    margin-right: 20px;
+    margin-right: 5px;
   }
   .spacer {
 	margin: 0 10px;
@@ -186,6 +189,10 @@ dispatch('openWhyRecruitlyPopup', { closePopup });
 	  border: none;
 	  cursor: pointer;
 	}
+    .why-recruitly-anchor {
+	  cursor: pointer;
+	}
+   
   
   </style>
   
