@@ -49,6 +49,7 @@
         .hero-section {
       text-align: center;
       margin-bottom: 100px;
+      margin-top: -1000px;
     }
      
     
@@ -76,8 +77,8 @@
       }
   
       .pricing-component {
-        width: 100%;
-        height: 100vh;
+        width: 100vh;
+        height: 250vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
