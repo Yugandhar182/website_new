@@ -104,9 +104,9 @@
         font-family: Arial, sans-serif;
       }
   
-      .automation-component {
+        .automation-component {
         width: 100%;
-        height:300vh;
+        height:150vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -114,7 +114,6 @@
         background-color: #f0f0f0;
         padding: 20px;
       }
-  
       
   
      
