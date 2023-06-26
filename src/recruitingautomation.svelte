@@ -63,7 +63,7 @@
      
      .hero-section {
       text-align: center;
-      margin-top: -100px;
+      margin-top: -1300px;
       margin-bottom: 100px;
     }
     .recruiting-automation-section h{
@@ -106,7 +106,7 @@
   
       .automation-component {
         width: 100%;
-        height:150vh;
+        height:300vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
