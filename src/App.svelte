@@ -2,7 +2,7 @@
 	import { createEventDispatcher} from 'svelte';
 	import 'bootstrap/dist/css/bootstrap.min.css';
 	import { navigate } from "svelte-navigator";
-        const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher();
 	import { Router, Link, Route } from "svelte-routing";
 	import RecruitingAutomation from "./recruitingautomation.svelte";
 	import RecruitingPricing from "./recruitingpricing.svelte";
@@ -11,13 +11,7 @@
   
 	let showOverviewPopup = false;
 	let showWhyRecruitlyPopup = false;
-	let showTryFreeModal = false;
-	let firstName = '';
-	let email = '';
-	let mobile = '';
-	let companyName = '';
-	let linkedIn = '';
-	let address = '';
+
   
 	let featureIndex = 0;
 	const features = [
@@ -27,9 +21,7 @@
 	];
    
   
-	function openTryFreeModal() {
-	  showTryFreeModal = true;
-	}
+	
   
    
 	function openWhyRecruitlyPopup() {
@@ -38,7 +30,7 @@
   
 	
 	function closePopup() {
-	  showTryFreeModal = false;
+	 
 	  showWhyRecruitlyPopup = false;
 	  showOverviewPopup = false;
 	  
@@ -67,19 +59,19 @@
 	  <a on:click={openWhyRecruitlyPopup}  class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Why Recruitly</a>
 	  <span class="spacer"></span>
     <Router>
-		  <nav>
+		 
 
 			<a on:click={navigateToAutomation} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Automation</a>
       <span class="spacer"></span>
 			<a on:click={navigateToPricing} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Pricing</a>
       
-		  </nav>
+		 
 	
 		 
 		  <Route path="/automation" component={RecruitingAutomation} />
 		  <Route path="/pricing" component={RecruitingPricing} />
 		</Router>
-	 <li><a on:click={openTryFreeModal} style="color: blue; font-weight: 700;" class="why-recruitly-anchor" >Try Free</a></li>
+	
 	   
 	  </div>
 	
@@ -220,53 +212,7 @@
   
   
 	  
-  {#if showTryFreeModal}
-  <div class="modal" tabindex="-1" role="dialog" style="display: block;">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title" style="color: blue;">Start your 1-Week FREE trial.</h5>
-		 
-		  <button type="button" class="close" aria-label="Close" on:click={closePopup}>
-			<span aria-hidden="true">&times;</span>
-		  </button>
-		 
-		</div>
-		<div class="modal-body">
-		  <form>
-			<div class="form-group">
-			  <label for="firstName"></label>
-			  <input type="text" class="form-control" id="firstName" bind:value={firstName} placeholder="Enter your first name">
-			</div>
-			<div class="form-group">
-			  <label for="email"></label>
-			  <input type="email" class="form-control" id="email" bind:value={email} placeholder="Enter your email">
-			</div>
-			<div class="form-group">
-			  <label for="mobile"></label>
-			  <input type="tel" class="form-control" id="mobile" bind:value={mobile} placeholder="Enter your mobile number">
-			</div>
-			<div class="form-group">
-			  <label for="companyName"></label>
-			  <input type="text" class="form-control" id="companyName" bind:value={companyName} placeholder="Enter your company name">
-			</div>
-			<div class="form-group">
-			  <label for="linkedIn"></label>
-			  <input type="text" class="form-control" id="linkedIn" bind:value={linkedIn} placeholder="Enter your LinkedIn profile URL">
-			</div>
-			<div class="form-group">
-			  <label for="address"></label>
-			  <textarea class="form-control" id="address" bind:value={address} placeholder="Enter your address"></textarea>
-			</div>
-		  </form>
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-primary" on:click={closePopup}>Submit</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-  {/if}
+ 
   
   <style>
 	
