@@ -2,21 +2,21 @@
 	import { createEventDispatcher} from 'svelte';
 	import 'bootstrap/dist/css/bootstrap.min.css';
 	import { navigate } from "svelte-navigator";
-     const dispatch = createEventDispatcher();
+        const dispatch = createEventDispatcher();
 	import { Router, Link, Route } from "svelte-routing";
 	import RecruitingAutomation from "./recruitingautomation.svelte";
 	import RecruitingPricing from "./recruitingpricing.svelte";
-     import Popup from './Popup.svelte';
-    import Home from './Home.svelte';
+        import Popup from './Popup.svelte';
+        import Home from './Home.svelte';
  
-   let isPopupOpen = false;
-   let showOverviewPopup = false;
-  function openWhyRecruitlyPopup() {
-  isPopupOpen = true;
-    }
-  dispatch('openWhyRecruitlyPopup', { closePopup });
+        let isPopupOpen = false;
+        let showOverviewPopup = false;
+        function openWhyRecruitlyPopup() {
+            isPopupOpen = true;
+          }
+       dispatch('openWhyRecruitlyPopup', { closePopup });
 
-  let featureIndex = 0;
+        let featureIndex = 0;
 	const features = [
 	  { text: 'ATS', color: 'blue' },
 	  { text: 'CRM', color: 'green' },
@@ -38,44 +38,41 @@
 	}, 2000);
   
 	function navigateToAutomation() {
-    window.location.href =  "/automation";
-	}
+          window.location.href =  "/automation";
+	  }
   
 	function navigateToPricing() {
-    window.location.href ="/pricing";
+           window.location.href ="/pricing";
 	}
 	function redirectToHome() {
-    window.location.href = "/";
-  }
+          window.location.href = "/";
+          }
    
   </script>
-   {#if isPopupOpen}
-   <Popup {closePopup} />
+
+      {#if isPopupOpen}
+       <Popup {closePopup} />
      {/if}
    
-  <main>
+    <main>
   
 	<div class="information">
 	  <a on:click={openWhyRecruitlyPopup}  class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Why Recruitly</a>
 	  <span class="spacer"></span>
 
           <Router>
-		  <a on:click={navigateToAutomation} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Automation</a>
+	    <a on:click={navigateToAutomation} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Automation</a>
             <span class="spacer"></span>
-			<a on:click={navigateToPricing} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Pricing</a>
-      
-		  <Route path="/" component={Home} />
-		  <Route path="/automation" component={RecruitingAutomation} />
-		  <Route path="/pricing" component={RecruitingPricing} />
-		</Router>
+	   <a on:click={navigateToPricing} class="why-recruitly-anchor" style="color: blue; font-weight: 700;">Pricing</a>
+           <Route path="/" component={Home} />
+	   <Route path="/automation" component={RecruitingAutomation} />
+	   <Route path="/pricing" component={RecruitingPricing} />
+	   </Router>
 	
-	   </div>
-	
-  
-	
+	</div>
 	  <img src="https://recruitly.io/wp-content/uploads/2020/10/recruitly-logo-300x83.png" onclick="window.location.href='/'" />
 
-	<div class="container">
+	  <div class="container">
 	  <h1 class="display-4"style="color:blue;font-weight: 700;" > Recruitment</h1>
 	   <h1 class="display-4"style="color:blue;font-weight: 700;"><span class="feature-text" style="color: {features[featureIndex].color}; font-weight: 700;">
 		{features[featureIndex].text}
@@ -308,12 +305,13 @@
 	.modal {
 	  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control transparency */
 	}
+
 	img {
     position: absolute;
-    top: 20px; /* Adjust the top position as needed */
-    left: 80px; /* Adjust the left position as needed */
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    top: 20px; 
+    left: 80px; 
+    width: 150px; 
+    height: auto;
   }
   
   
