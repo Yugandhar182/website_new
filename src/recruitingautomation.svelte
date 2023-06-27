@@ -45,7 +45,7 @@
       <section class="testimonials-section">
         <table>
           <div class="container">
-            <div class="col">
+            <div class="row">
               <div class="col-md-4">
                 <div class="feature-card">
                   <i class="fa fa-search"></i>
@@ -56,7 +56,7 @@
               <div class="col-md-4">
                 <div class="feature-card">
                   <i class="fa fa-envelope"></i>
-                  <h3 style="color:purple; font-weight:11600;">Proactive Interaction</h3>
+                  <h3 style="color:purple; font-weight:600;">Proactive Interaction</h3>
                   <h6>Using Automation + Email Sequences you can engage with your passive contacts and candidates..</h6>
                 </div>
               </div>
@@ -81,6 +81,13 @@
                   <h6>Executing recurring activities on a daily basis gets mundane and monotonous for employees.</h6>
                 </div>
               </div>
+              <div class="col-md-4">
+                <div class="feature-card">
+                  <i class="fa fa-users"></i>
+                  <h3 style="color:purple; font-weight:600;">Be in control</h3>
+                  <h6>Ensure that recruiting standards are enforced automatically, and build a streamlined and an error proof workflow.</h6>
+                </div>
+              </div>
             </div>
           </div>
         </table>
@@ -94,13 +101,14 @@
     }
     .hero-section {
     text-align: center;
-    margin-top: -900px;
+    margin-top: -1100px;
     margin-bottom: 10px;
   }
   .recruiting-automation-section h{
      
      font-weight: bold;
      font-size: 2rem;
+     margin-top: 80px;
    }
     .recruiting-automation-section h2 {
         margin-top: 1px;
@@ -118,11 +126,13 @@
 
       font-weight: bold;
       font-size: 1.7rem;
+      margin-top: 50px;
     }
     .recruiting-automation-section h6 {
 
     font-weight: bold;
     font-size: 1rem;
+    margin-top: 10px;
    }
  
 
@@ -137,13 +147,13 @@
 
     .automation-component {
        margin-top:5vh;
-      width: 220vh;
+      width: 215vh;
       height:250vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0;
+      background-color:white;
       padding: 20px;
       margin-left: 140vh;
       margin-right: -50vh;
