@@ -1,16 +1,14 @@
 <script>
    import 'bootstrap/dist/css/bootstrap.min.css';
    import { Link } from "svelte-routing";
-  import { createEventDispatcher } from 'svelte';
-  
- 
-  import Popup from './Popup.svelte';
+   import { createEventDispatcher } from 'svelte';
+   import Popup from './Popup.svelte';
 
-let isPopupOpen = false;
-const dispatch = createEventDispatcher();
-function openWhyRecruitlyPopup() {
-isPopupOpen = true;
-}
+    let isPopupOpen = false;
+    const dispatch = createEventDispatcher();
+    function openWhyRecruitlyPopup() {
+     isPopupOpen = true;
+    }
 
 function closePopup() {
 isPopupOpen = false;
