@@ -27,7 +27,7 @@
 		<button class="close-button" on:click={closePopup}>&times;</button>
 		<h1><Link to="/Emailmarketing" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Email Marketing</Link></h1>
 		
-		<Route path="/Emailmarketing" component={emailmarketing} />
+		
 		</div>
 	</div>
    </div>
