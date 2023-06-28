@@ -3,34 +3,73 @@
 	import { createEventDispatcher} from 'svelte';
 	import 'bootstrap/dist/css/bootstrap.min.css';
 	import { navigate } from "svelte-routing";
-         const dispatch = createEventDispatcher();
-	 import { Router, Link, Route } from "svelte-routing";
-
-	
+    const dispatch = createEventDispatcher();
+	import { Router, Link, Route } from "svelte-routing";
+    import Trackingsystem from "./trackingsystem.svelte";
+	import SearchImport from "./SearchImport.svelte";
 	
 	export let closePopup;
 
-
-
-	function navigateToEmail() {
+        function navigateToEmail() {
 	    window.location.href = "/Emailmarketing";
 	    }
+		function navigateToTrackingSystem() {
+	    window.location.href = "/Tracking_System";
+	    }
+		function navigateToWebsiteIntegration() {
+	    window.location.href = "/Website_Integration";
+	    }
+		function navigateToJobDistribution() {
+	    window.location.href = "/Job_Distribution";
+	    }
+		function navigateToSearchImport(){
+	    window.location.href = "/Search_Import";
+	    }
+		function navigateToRecruitingAutomation() {
+	    window.location.href = "/Chrome_Extension";
+	    }
+
+
    </script>
 
  <Router>
-  <div class="popup">
-	<h3>Why Recruitly?</h3>
-  
-	<div class="popup" on:click={closePopup}>
-	
-	  <div class="popup-content">
-		<button class="close-button" on:click={closePopup}>&times;</button>
-		<h1><Link to="/Emailmarketing" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Email Marketing</Link></h1>
+	<div class="popup">
+		<h3>Why Recruitly?</h3>
 		
+		 <div class="popup" on:click={closePopup}>
+		  
+			<div class="popup-content">
+			  <button class="close-button" on:click={closePopup}>&times;</button>
+			  <div class="popup-section">
+				<h3><Link to="/Emailmarketing" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Email Marketing</Link></h3>
+				
+				<p class="custom-paragraph">Engage talent at the right time, promote your business to the right audience.</p>
+			  </div>
+			  <div class="popup-section">
+				<h3><Link to="/Tracking_System" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Applicant Tracking System</Link></h3>
+				<p class="custom-paragraph">Candidate sharing, boolean searches, interview scheduling, automation and more.</p>
+			  </div>
+			  <div class="popup-section">
+				<h3><Link to="/Website_Integration" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Website Integration</Link></h3>
+				<p class="custom-paragraph">Turn your WordPress website into a fully featured job-board using our FREE plugins.</p>
+			  </div>
+			  <div class="popup-section">
+				<h3><Link to="/Job_Distribution" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Job Distribution</Link></h3>
+				<p class="custom-paragraph">Get your job in front of millions of candidates, manage applicants in one place.</p>
+			  </div>
+			  <div class="popup-section">
+				<h3><Link to="/Search_Import" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Search & Import</Link></h3>
+				<p class="custom-paragraph">Search and import candidates from CV-Library and TotalJobs with just a few clicks.</p>
+			  </div>
+			  <div class="popup-section">
+				<h3><Link to="/Chrome_Extension" class="why-recruitly-anchor" style="color: blue; font-weight:700;">Google Chrome Extension</Link></h3>
+				<p class="custom-paragraph">Easily source leads, contacts and candidates from LinkedIn and other websites.</p>
+			  </div>
+			</div>
+		  
 		
-		</div>
-	</div>
-   </div>
+	  </div>
+	  
  </Router>
   <style>
   
