@@ -8,7 +8,7 @@
 	import RecruitingPricing from "./recruitingpricing.svelte";
         import Popup from './Popup.svelte';
         import Home from './Home.svelte';
- 
+        import emailmarketing from "./emailmarketing.svelte";
         let isPopupOpen = false;
         let showOverviewPopup = false;
         function openWhyRecruitlyPopup() {
@@ -67,6 +67,7 @@
            <Route path="/" component={Home} />
 	   <Route path="/automation" component={RecruitingAutomation} />
 	   <Route path="/pricing" component={RecruitingPricing} />
+          <Route path="/Emailmarketing" component={emailmarketing} />
 	   </Router>
 	
 	</div>
