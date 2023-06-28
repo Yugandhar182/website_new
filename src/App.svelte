@@ -7,8 +7,7 @@
 	import RecruitingAutomation from "./recruitingautomation.svelte";
 	import RecruitingPricing from "./recruitingpricing.svelte";
         import Popup from './Popup.svelte';
-       
-	import emailmarketing from "./emailmarketing.svelte";
+        import emailmarketing from "./emailmarketing.svelte";
 	import Trackingsystem from "./trackingsystem.svelte";
         import WebsiteIntegration from './WebsiteIntegration.svelte';
 	import JobDistribution from './JobDistribution.svelte';
