@@ -41,7 +41,7 @@
         <h2 style="color: darkmagenta;">Fast and Effective</h2>
         <p style="color:black; font-weight: 700;">Stop wasting time posting to tens of job boards manually, advertise</p>
         <p>your vacancies to multiple job boards, social media, and to your.</p>
-        
+       
       
       </div>
       <h style="color:blue; ">Simplified Applicant Management</h>
@@ -51,19 +51,23 @@
            <h6>Jobs are posted automatically to job boards with the link to apply in the ATS. Applicants create their account and</h6>
            <h6>your vacancies to multiple job boards, social media, and to your</h6>
            <h6>website instantly.</h6>
+           <img  width= "800" height = "500" src = 	https://recruitly.io/wp-content/uploads/2021/03/recruitlyjobsfunnelv2.svg />
                 </div>
               </div>
-             
-   </section>
+
+            </section>
+            
+            
   
   
+   
   <style>
     .spacer {
       margin: 0 10px;
     }
     .hero-section {
     text-align: center;
-    margin-top: -1300px;
+    margin-top: -900px;
     margin-bottom: 10px;
   }
   .recruiting-tracking-section h{
